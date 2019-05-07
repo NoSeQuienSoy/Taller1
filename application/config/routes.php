@@ -53,3 +53,7 @@ $route['default_controller'] = 'ejemplo_controlador';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['contacto'] = 'ejemplo_controlador/contacto';
+$route['registrarse'] ='cliente_controlador/registrarse';
+$route['tienda'] ='ejemplo_controlador/tienda';
+$route['terminos'] = 'ejemplo_controlador/terminos';
+$route['quienesSomos'] = 'ejemplo_controlador/quienesSomos';
