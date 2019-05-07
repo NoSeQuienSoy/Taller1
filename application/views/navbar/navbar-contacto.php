@@ -7,7 +7,7 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item ">
-				<a class="nav-link" href="<?php echo base_url('ejemplo_controlador');?>">Inicio </a>
+				<a class="nav-link" href="<?php echo base_url('usuario_controlador');?>">Inicio </a>
 			</li>
 			<li class="nav-item active">
 				<a class="nav-link" href="<?php echo base_url('contacto');?>"><img src="<?php echo base_url('assets/icons/phone-call.svg'); ?>" height="15" width="15"> Contacto <span class="sr-only">(current)</span></a>

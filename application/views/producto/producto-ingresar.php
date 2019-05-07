@@ -11,3 +11,4 @@
 		echo form_dropdown('categoria', $lista,'0','class="form-control"');
 	?>
 	<?php echo form_input(['name'=>'imagen','id'=>'imagen', 'type'=>'file','value'=>setvalue('imagen')]); ?>
+</div>
