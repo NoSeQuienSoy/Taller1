@@ -1,7 +1,7 @@
 <div class="container jumbotron mt-3">
 	<?php echo validation_errors(); ?>
-	<?php echo form_open('producto_controlador/form_cargar_producto',['role'=>'form']); ?>
-	<!-- Para adjuntar archivos form_open_multipart 
+	<?php echo form_open_multipart('producto_controlador/form_cargar_producto',['role'=>'form']); ?>
+	<!-- Para adjuntar archivos form_open_multipart
 	entype: es necesario inclurila en el envio de archivos adjuntos:enctype="multipart/form_data"-->
 	<?php
 		$lista['0']='Seleccione categoria';
