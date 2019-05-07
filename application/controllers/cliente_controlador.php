@@ -45,11 +45,11 @@ class Cliente_controlador extends CI_Controller
 
  public function insertar_cliente()
  {
- 	$cliente = array('apellido'=> $this->input->post('apellido'),
-		'nombre'=>$this->input->post('nombre'),
+ 	$cliente = array(
+		'nomyape'=>$this->input->post('nomyape'),
 		'mail'=>$this->input->post('mail'),
-		'telefono'=>$this->input->post('telefono'),
-		'idPerfil'=>2
+		'id_perfil'=>2,
+		'estado'=>TRUE
 		 // 2 es cliente y 1 administrador
  	);
 
@@ -57,11 +57,11 @@ class Cliente_controlador extends CI_Controller
  	$this->cliente_modelo->guardar_cliente($cliente);
  	$id_persona = $this->db->insert_id();
 
-	$this->usuario_controlador->guardar_usuario($id_persona);
+	// $this->usuario_controlador->guardar_usuario($id_persona);
  	$usuario = array(
  		'mail'=>$this->input->post('mail'),
- 		'password'=>base64_encode($this->input->post('password')),
- 		'idCliente'=>$id_persona
+ 		'contrasenia'=>base64_encode($this->input->post('contrasenia')),
+ 		'id_persona'=>$id_persona
  	);
  	$this->cliente_model->guardar_usuario($usuario);
 

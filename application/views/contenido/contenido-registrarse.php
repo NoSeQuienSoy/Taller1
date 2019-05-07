@@ -1,14 +1,14 @@
 ﻿<div class="container jumbotron mt-3">
 	<?php echo validation_errors(); ?>
 	<?php echo form_open('cliente_controlador/registrar_cliente',['role'=>'form']); ?>
-	<!-- Para adjuntar archivos form_open_multipart 
+	<!-- Para adjuntar archivos form_open_multipart
 	entype: es necesario inclurila en el envio de archivos adjuntos:enctype="multipart/form_data"-->
 	<div class="form-row">
 		<div class="col-md-4">
 			<img src="<?php echo base_url('assets/img/img-user.png'); ?>" alt="avatar" class="img-thumbnail mb-3 mx-auto d-block" width="100" height="100">
 			<div class="custom-file">
 				<input type="file" class="custom-file-input" id="customFileLang" lang="es">
-				
+
 				<label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
 			</div>
 		</div>
@@ -31,22 +31,7 @@
 					Please choose a username.
 				</div>
 			</div>
-			<label class="mt-2">Género</label><!--
-			<div class="custom-control custom-radio">
-				<input id="genero" name="genero" type="radio" class="" <?php if($genero=='0') echo "checked='checked'"; ?> value="0" <?php echo $this->form_validation->set_radio('genero', 0); ?> />
-				<input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-				<label class="custom-control-label" for="customRadio1">Hombre</label>
-			</div>
-			<div class="custom-control custom-radio">
-				<input id="genero" name="genero" type="radio" class="" <?php if($genero=='1') echo "checked='checked'"; ?> value="1" <?php echo $this->form_validation->set_radio('genero', 1); ?> />
-				<input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-				<label class="custom-control-label" for="customRadio2">Mujer</label>
-			</div>
-			<div class="custom-control custom-radio">
-				<input id="genero" name="genero" type="radio" class="" <?php if($genero=='2') echo "checked='checked'"; ?> value="2" <?php echo $this->form_validation->set_radio('genero', 2); ?> />
-				<input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-				<label class="custom-control-label" for="customRadio3">Otro</label>
-			</div> -->
+			<label class="mt-2">Género</label>
 			<div>
 				<?php echo form_radio('genero', 'H', FALSE); ?>
 				<label class="">Hombre</label>
