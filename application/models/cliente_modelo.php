@@ -20,10 +20,10 @@
  		$this->db->insert('usuario',$data);
  	}
 
-	public function select_categoria(){
-		$query = this->db->get('categoria_producto');
-		return $query->result();
-	}
+	// public function select_categoria(){
+		// $query = this->db->get('categoria_producto');
+		// return $query->result();
+	// }
 
  }
 ?>

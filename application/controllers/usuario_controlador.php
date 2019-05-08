@@ -19,9 +19,9 @@ class Usuario_controlador extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	public function __contruct()
+	public function __construct()
 	{
-		parent::__contruct();
+		parent::__construct();
 	}
 	public function index()
 	{

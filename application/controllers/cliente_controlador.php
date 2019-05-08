@@ -20,8 +20,8 @@ class Cliente_controlador extends CI_Controller
   $this->form_validation->set_rules('nomyape','Nombre y apellido del cliente','required');
   $this->form_validation->set_rules('email','dirección de correo electronico','required|valid_email');
 		//luego se pone is_unique[personas.mail]
-  $this->form_validation->set_rules('contrasenia','Contraseña','required|min_leght[8]|trim');
-  $this->form_validation->set_rules('contraconf','Confirmar contraseña','required|trim|matches[password]');
+  $this->form_validation->set_rules('contrasenia','Contraseña	','required|min_length[8]|trim');
+  $this->form_validation->set_rules('contraconf','Confirmar contraseña','required|trim|matches[contrasenia]');
   $this->form_validation->set_rules('genero','Genero','required');
 
   // Mensaje de validacion
@@ -46,10 +46,12 @@ class Cliente_controlador extends CI_Controller
  public function insertar_cliente()
  {
  	$cliente = array(
+		'mail' => $this->input->post('email'),
+		'contrasenia' => base64_encode($this->input->post('contrasenia')),
 		'nomyape'=>$this->input->post('nomyape'),
-		'mail'=>$this->input->post('mail'),
+		'genero'=>$this->input->post('genero'),
+		'estado'=>TRUE,
 		'id_perfil'=>2,
-		'estado'=>TRUE
 		 // 2 es cliente y 1 administrador
  	);
 
@@ -59,13 +61,15 @@ class Cliente_controlador extends CI_Controller
 
 	// $this->usuario_controlador->guardar_usuario($id_persona);
  	$usuario = array(
- 		'mail'=>$this->input->post('mail'),
+ 		'mail'=>$this->input->post('email'),
  		'contrasenia'=>base64_encode($this->input->post('contrasenia')),
- 		'id_persona'=>$id_persona
+ 		'id_persona'=>$id_persona,
+		'estado'=>TRUE,
+		'id_perfil'=>'2'
  	);
- 	$this->cliente_model->guardar_usuario($usuario);
+ 	$this->cliente_modelo->guardar_usuario($usuario);
 
- 	redirect('usuarios_controler/login');
+ 	redirect('usuario_controlador');
  }
  // public function insertar_producto()
  // {
